@@ -1,0 +1,16 @@
+Return the number (count) of vowels in the given string.
+
+We will consider a, e, i, o, u as vowels for this Kata (but not y).
+
+The input string will only consist of lower case letters and/or spaces.
+
+=============
+
+function getCount(str) {
+  return (str.match(/[aieou]/ig) || []).length
+}
+
+//match retrieves the results of matching a string against a regular expression.
+// '/ig' are flags which indicate global and case insensitive search
+// ||[] is used because if there no matching vowels then null is returned
+// if there is no matching vowels 0 should be returned but .length will not return 0 when checking length of null.

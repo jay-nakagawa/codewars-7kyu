@@ -1,0 +1,22 @@
+function findShort(s){
+let newArr = s.split(' ')
+let sortedArr = newArr.map(x => x.length).sort((a,b)=> a - b)
+return sortedArr[0]
+
+  
+}
+
+
+
+refactor 
+
+function findShort(s){
+    return Math.min(...s.split(" ").map (x => x.length));
+}    
+
+// math.min does not work on an array unless using spread syntax.
+
+//
+1. s.split(' ') splits the string, creating an array of words
+2. map(x => x.length) accts on the array and returns a new array containing the length of each element
+3. spread syntax on Math.min allows it to find the smallest number in the array of lengths.

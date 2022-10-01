@@ -1,0 +1,9 @@
+function accum(s) {
+	let newArr = s.split('')
+  let multiArr = newArr.map((x,y) => x.repeat(y + 1))  //this is a test comment
+  let almostThere = multiArr.map((x) => x.toLowerCase() )
+  return almostThere.map(x => { 
+    return x.charAt(0).toUpperCase() + x.slice(1).toLowerCase() }).join('-')
+  
+  
+}

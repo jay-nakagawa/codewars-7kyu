@@ -1,0 +1,14 @@
+Exes and Ohs
+
+function XO(str) {
+  let x = str.match(/x/gi) // returns an array with instances of x
+  let o = str.match(/o/gi) //returns an array with instances of o
+  return (x && x.length) === (o && o.length) //*
+}
+
+//* function is supposed to equal true when no x's or o's are passed in
+
+//str.match(/x/gi) returns null when an arguement with no 'x' is passed in
+// logical && operator returns the value of the first falsy operand or the value of the last operator if they are all truth.
+// if there are no x's or o's then x = null and o = null
+	null === null returns true

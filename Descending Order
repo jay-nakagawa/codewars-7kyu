@@ -1,0 +1,23 @@
+Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+
+Examples:
+Input: 42145 Output: 54421
+
+Input: 145263 Output: 654321
+
+Input: 123456789 Output: 987654321
+
+
+function descendingOrder(n){
+  return +String(n).split('').sort().reverse().join('')
+}
+
+
+//Goal is take an integer, and sort it to make a new number that is as large as possible (sorted greatest to least)
+// .sort() only works on arrays.
+// .split() only works on strings 
+// String(n) turns n into a string so we can use .split() to make an array which will allow us to use .sort()
+//.sort() will give us an array from smallest to largest so we use .reverse() to give us an array that is largest to smallest. ( a function can be passed into sort to replace .reverse() )
+// .join('') combines array together, giving us the correct answer in the form of a string
+// + on String(n) turns that string into a number 
+

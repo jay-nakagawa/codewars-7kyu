@@ -1,0 +1,12 @@
+Given a string of numbers, return the largest and smallest number
+
+eg. highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"), "42 -9")
+
+function highAndLow(numbers){
+  let newArr = numbers.split(' ')
+  return Math.max(...newArr) + ' ' + Math.min(...newArr)
+}
+
+
+// numbers.split(' ') splits the numbers and returns them in a new array
+//Math.max() and Math.min() are used with spread syntax to check for max and min values of the whole array.

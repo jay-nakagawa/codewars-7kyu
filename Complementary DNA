@@ -1,0 +1,18 @@
+function DNAStrand(dna){
+ let list = {
+   'A': 'T',
+   'T': 'A',
+   'G': 'C',
+   'C': 'G'
+ }
+ return dna.split('').map(elem => list[elem]).join('')
+}
+```
+
+>chaining .replace() creates errors so we create an object which holds all the cases
+>dna.split('') creates an array. 
+>.map goes through each element in the array, grabs the element and uses it to access the property.  
+>	list[elem]  = list['A'] = 'T'
+>.join('') then joins all the array elements together
+>
+>_objectName_["property"]   // person['age']

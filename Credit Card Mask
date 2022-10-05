@@ -1,0 +1,5 @@
+function maskify(cc) {
+  return cc.slice(0, -4).replace(/./g, '#') + cc.slice(-4);
+}
+
+// cc.slice(0, -4).replace(/./g, '#') takes all the characters from element 0 until the 4 last character and replaces them with '#'. the '.' inside the regex indicates all characters will be targeted execpt for line breaks

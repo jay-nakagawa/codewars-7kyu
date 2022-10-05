@@ -3,3 +3,23 @@ function maskify(cc) {
 }
 
 // cc.slice(0, -4).replace(/./g, '#') takes all the characters from element 0 until the 4 last character and replaces them with '#'. the '.' inside the regex indicates all characters will be targeted execpt for line breaks
+
+
+alternate using a loop
+
+function maskify(cc) {
+  cc = cc.split("");
+  for(var i = 0; i < cc.length - 4; i++){
+    cc[i] = "#";
+}
+
+cc = cc.join("");
+return cc
+}
+
+
+// the argument is split into an array
+// create a for loop, starting at 0 and running while i is less than the length of cc - 4
+// cc[i] is changed into '#'
+// cc is currently an array with everything except for last 4 characters set as #. the last 4 remain unchanged
+//cc is joined then returned as a string.

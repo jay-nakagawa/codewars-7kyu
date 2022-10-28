@@ -1,0 +1,16 @@
+function getCount(str) {
+  let theCount = 0
+  theCount += str.match(/[aieou]/ig).length
+  return theCount
+}
+
+
+
+the above solution does not work when the arguement does not include a vowel. this is because .match() returns null and null.length() does not work. we put in the logical || operator to us [] as a secondary value incase the first value is falsy
+
+
+
+
+function getCount(str) {
+  return str.match(/[aeiou]/gi || []).length
+}

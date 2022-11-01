@@ -1,0 +1,26 @@
+function nbYear(p0, percent, aug, p) {
+ let pop = p0
+ let counter = 0
+ for(let y = 0; pop < p; y++){
+   pop = pop + pop * (percent / 100) + aug  
+   counter += 1
+ }
+  return counter
+}
+
+my solution
+
+
+
+
+function nbYear(p0, percent, aug, p, years = 0) {
+  return p0 >= p
+    ? years
+    : nbYear(
+        Math.floor(p0 + p0 * (percent / 100)) + aug,
+        percent,
+        aug,
+        p,
+        years + 1
+      );
+}

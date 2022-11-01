@@ -1,0 +1,8 @@
+function isTriangle(a,b,c)
+{
+   return a < b + c && b < a + c && c < a + b
+}
+
+
+//goal is to return true if the given lengths can be used to create a triangle
+google triangle inequality theorem for more information

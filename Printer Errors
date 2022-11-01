@@ -1,0 +1,10 @@
+function printerError(s) {
+   let counter = s.match(/((?![a-m]).)/g)
+   return counter ? `${counter.length}/${s.length}` : `0/${s.length}`
+}
+
+// counter returns the results of matching s to the regex that i set up
+the regex matches results that DO NOT fall within a-m
+if counter is truthy then return counter.length / s. length within a template literal. 
+this gives us the answer of how many characters do not fall within a-m, expressed as a fraction.
+if falsy we return 0/ the length of s.

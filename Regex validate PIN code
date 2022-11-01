@@ -1,0 +1,17 @@
+function validatePIN (pin) {
+ if (pin.length !== 4 && pin.length !== 6){return false}
+  
+  for(let i = 0; i < pin.length; i++){
+    if(pin[i] < '0' || pin[i] > '9') {return false}
+  }
+  
+  return true
+}
+
+
+//goal is to create a function that checks if pin is 4 or 6 characters and only contains digits.
+if these requirements are met then return true
+create if statement to check the length requirement. 
+if pin length IS NOT 4 and IS NOT 6 then return false
+must use && and not || 
+for loop through the string and check is pin[i] is less than 0 or greater than 9

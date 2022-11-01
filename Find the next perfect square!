@@ -1,0 +1,18 @@
+function findNextSquare(sq) {
+
+  let x = Math.sqrt(sq)
+
+if(Math.sqrt(sq) % 1 != 0){return -1}
+else{return (x + 1)**2}
+
+}
+
+
+///
+we are given sq which is a perfect square number
+our task is to find the next biggest perfect square
+if the argument is not a perfect square then we return -1
+line 5 checks if sq is not a perfect square and returns -1 if truthy
+else we take sq and root it. we then add one and square it. this gives us the next biggest perfect square.
+
+

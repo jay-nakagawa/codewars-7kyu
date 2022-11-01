@@ -1,0 +1,8 @@
+function addBinary(a,b) {
+let result = a + b
+return result.toString(2)
+}
+
+//goal is to sum two numbers the convert to binary
+// toString() converts to a string and can have a radix pass in.
+in this case the radix is two because we want to convert to binary

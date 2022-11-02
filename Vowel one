@@ -1,0 +1,11 @@
+function vowelOne(s){
+return s.split('').map(x => ('aeiouAEIOU'.includes(x)) ? '1' : '0').join('')
+}
+
+// goal is to take a string and return a 0 or 1 based on the characters of the string
+// 1= vowel 0 = non-vowel
+//split the string so we can map it
+//take the element of each index and see if it is a vowel
+//if it is a vowel then return 1 else 0.
+//join
+

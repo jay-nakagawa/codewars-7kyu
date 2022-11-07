@@ -1,0 +1,13 @@
+function solution(nums){
+
+ if(nums){return nums.sort((a,b) => a - b)}
+  else{return []}
+}
+
+*task is to take in an array of numbers, and return a sorted array with the same values.
+*if an empty array or a null value is passed then return an empty array
+
+*if nums == true then use nums.sort() with the arrow function a - b. this sorts the array from least to greatest.
+if no parameters are specified then sort will not properly sorty numbers > 9
+
+* if nums == false then return an empty array

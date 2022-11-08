@@ -1,0 +1,26 @@
+My Solution
+
+var number = function(busStops){
+  let totalOn = 0
+  let totalOff = 0
+  for(let i = 0; i < busStops.length; i++){
+    totalOn += busStops[i][0]
+    totalOff += busStops[i][1]
+  }
+  return totalOn - totalOff
+}
+
+
+* goal is to take an array of arrays, sum all the 0th elements in each inner array and subtract, from that sum, all of the values in the 1st element.
+
+*one possible refactor is to have one variable to keep track of people getting on and off. instead of doing += for each counter, you can do += for summing the first value and -= for the 2nd value. 
+
+var number = function(busStops){
+  let totalCount = 0
+  
+  for(let i = 0; i < busStops.length; i++){
+    totalCount += busStops[i][0]
+    totalOff -= busStops[i][1]
+  }
+  return totalCount
+}

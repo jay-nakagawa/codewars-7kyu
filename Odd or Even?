@@ -1,0 +1,7 @@
+function oddOrEven(array) {
+  if(array.reduce((a,b) => a + b,0) % 2 === 0){return 'even'}
+  else{return 'odd'}
+}
+
+*goal is to sum an array and if the sum is even then return 'even' else 'odd'
+*reduce must include the initial value incase an empty array is passed in.
